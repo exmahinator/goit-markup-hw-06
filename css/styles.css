@@ -722,6 +722,7 @@
 }
 
 .subscribe-field {
+    display: flex;
     padding: 15px 16px;
     background: transparent;
 
