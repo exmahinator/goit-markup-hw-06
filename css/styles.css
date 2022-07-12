@@ -966,7 +966,7 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-check:focus + .fake-checkbox {
+.modal-check:checked + .fake-checkbox {
     background-color: var(--accent, #2196f3);
     border-color: transparent;
 }
