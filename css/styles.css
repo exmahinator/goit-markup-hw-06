@@ -146,6 +146,25 @@
 .title-reset {
     margin-top: 0;
     margin-bottom: 0;
+    font-size: inherit;
+}
+
+/* Button reset */
+.button {
+    font: inherit;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Form reset */
+
+.input,
+.textarea,
+.select {
+    font: inherit;
+    margin: 0;
+    border: none;
 }
 
 /* Common additional class - container */
@@ -190,7 +209,7 @@
     top: 0;
     position: fixed;
     z-index: 1;
-    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 5px );
     -webkit-backdrop-filter: blur(5px);
 }
@@ -285,9 +304,7 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     /* outline: 2px solid tomato; */
 }
@@ -347,7 +364,6 @@
     border-radius: 4px;
     padding: 10px 32px;
 
-    font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
@@ -356,94 +372,8 @@
     color: var(--hero-text, #ffffff);
     border-color: transparent;
 
-    cursor: pointer;
-
-    transition-property: filter, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* --------------------------------------Modal window-------------------------------------- */
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-
-    height: 100%;
-    width: 100%;
-
-    background-color: var(--modal-background, #00000033);
-
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur(5px);
-
-    opacity: 1;
-    transition-property: opacity, visibility;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.modal {
-    position: absolute;
-    min-height: 581px;
-    min-width: 528px;
-
-    top: 50%;
-    left: 50%;  
-
-    background-color: var(--body-background, #fff);
-    border-radius: 4px;
-
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-
-    transform: translate(-50%, -50%) scale(1);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(1.2);
-}
-
-.modal-button {
-    position: absolute;
-    
-    display: flex;
-    width: 30px;
-    height: 30px;
-    margin: 8px;
-    
-    top: 0;
-    right: 0;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-
-    cursor: pointer;
-
-    transition-property: background-color, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.close-modal {
-    fill: #000;
-    transition-property: fill, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* --------------------------------------Modal window-------------------------------------- */
 
 /* Our advantages */
 
@@ -632,10 +562,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    transition-property: background-color, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-item:last-child,
@@ -648,9 +576,7 @@
     height: 20px;
     fill: var(--team-icons, #afb1b8);
 
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Regular customers */
@@ -677,9 +603,7 @@
     border: 1px solid var(--customers-list, #AFB1B8);
     border-radius: 4px;
 
-    transition-property: border-color, color, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .regular-customers-item:nth-child(6n) {
@@ -689,9 +613,7 @@
 .icon-customers {
     fill: var(--customers-list, #afb1b8);
 
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -731,9 +653,7 @@
     line-height: 1.71;
     color: var(--footer-text, #ffffff);
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-transparent {
@@ -748,7 +668,9 @@
 .footer-social-subtitle {
     margin-bottom: 20px;
 
-    color: var(--footer-text, #ffffff);
+    color: var(--footer-text, #fff);
+    font-weight: 700;
+    line-height: 1.14;
     text-transform: uppercase;
 }
 
@@ -760,9 +682,7 @@
     background-color: var(--footer-social, #ffffff1a);
     color: var(--footer-text, #ffffff);
 
-    transition-property: background-color, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-footer {
@@ -772,6 +692,324 @@
     fill: var(--footer-text, #fff);
 }
 
+/* Subscribe and Modal forms */
+/* Subscribe form */
+
+.form {
+    display: flex;
+    margin-left: 93px;
+    max-width: 570px;
+    width: 100%;
+
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.subscribe {
+    display: flex;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    color: var(--footer-text, #fff);
+    font-weight: 700;
+    line-height: 1.14;
+}
+
+.field {
+    padding: 15px 16px;
+    background: transparent;
+
+    border: 1px solid #ffffff4d;
+    filter: drop-shadow(0px 4px 4px #00000026);
+    border-radius: 4px;
+    color: #ffffff99;
+}
+
+.submit-button {
+    position: relative;
+    display: inline-flex;
+    margin-left: 12px;
+    min-width: 200px;
+    padding: 10px 28px;
+    justify-content: left;
+    align-items: center;
+
+    color: var(--footer-text, #fff);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    background-color: var(--accent, #2196F3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-subscribe {
+    position: absolute;
+    right: 0;
+
+    transform: translate(-100%);
+
+    fill: var(--footer-text, #fff);
+}
+
+/* --------------------------------------Modal window-------------------------------------- */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: var(--modal-background, #00000033);
+
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    opacity: 1;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    max-height: 581px;
+    max-width: 560px;
+    width: 100%;
+    height: 100%;
+
+    top: 50%;
+    left: 50%;
+
+    background-color: var(--body-background, #fff);
+    border-radius: 4px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    
+    transform: translate(-50%, -50%) scale(1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.modal-button {
+    position: absolute;
+
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+}
+
+.close-modal {
+    fill: #000;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------Modal window-------------------------------------- */
+
+/* Modal form */
+
+.modal-form {
+    display: flex;
+    width: 100%;
+    padding: 40px;
+    flex-direction: column;
+}
+
+.modal-title {
+    display: flex;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    color: var(--secondary-text, #212121);
+
+    margin-bottom: 12px;
+}
+
+.modal-description {
+    display: inline-flex;
+    margin-bottom: 4px;
+    
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+}
+
+.modal-label {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.modal-label:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.modal-block {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+}
+
+.modal-description {
+    color: inherit;
+}
+
+.field-modal {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+
+    padding-left: 32px;
+
+    color: inherit;
+    border: 1px solid #21212133;
+    border-radius: 4px;
+
+    outline: transparent;
+    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-icon {
+    position: absolute;
+    left: 0;
+    transform: translateX(50%);
+    
+    fill: var(--secondary-text, #212121);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-comment {
+    resize: none;
+    height: 120px;
+    padding: 12px 16px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    
+    color: var(--main-text, #757575);
+    cursor: pointer;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    outline: transparent;
+    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-comment::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: #75757580;
+}
+
+.modal-comment:focus {
+    outline: 1px solid var(--accent, #2196f3);
+}
+
+.modal-checkbox {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.fake-checkbox {
+    position: relative;
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid var(--secondary-text, #212121);
+    border-radius: 4px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-check:focus + .fake-checkbox {
+    background-color: var(--accent, #2196f3);
+    border-color: transparent;
+}
+
+.fake-check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: var(--body-background, #fff);
+}
+
+.contract-text {
+    margin-left: 7px;
+}
+
+.contract-terms {
+    color: var(--accent, #2196f3);
+}
+
+.modal-submit {
+    max-width: 200px;
+    width: 100%;
+    display: flex;
+    padding: 10px 55px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: 30px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    background: var(--accent, #2196f3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--body-background, #fff);
+}
+
+.field-modal:focus {
+    outline: 1px solid var(--accent, #2196f3);
+}
+
+.field-modal:focus + .modal-icon {
+    fill: var(--accent, #2196f3);
+}
 
 /* --------------------------------------Portfolio-------------------------------------- */
 
@@ -791,7 +1029,6 @@
     border-radius: 4px;
     min-width: 73px;
 
-    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -800,12 +1037,10 @@
     color: var(--secondary-text, #212121);
     text-align: center;
     border-color: transparent;
+    box-shadow: transparent;
 
-    cursor: pointer;
-
-    transition-property: background-color, color, transform, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-item + .button-item {
@@ -826,9 +1061,7 @@
 
     background-color: var(--portfolio-item, #ffffff);
 
-    transition-property: box-shadow, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:nth-child(3n) {
@@ -876,9 +1109,8 @@
 
     transform: translatey(100%);
     opacity: 0;
-    transition-property: transform, opacity;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     background-color: var(--portfolio-overlay, #2196f3e6);
 }
@@ -987,6 +1219,12 @@
     background-color: var(--accent, #2196F3);
     transform: scale(1.25);
 }
+
+.submit-button:hover,
+.submit-button:focus {
+    transform: scale(1.05);
+}
+
 /* Between those comments will be "active" state for footer social links */
 /* Between those comments will be "active" state for footer social links */
 
@@ -1027,16 +1265,10 @@
 /* Between those comments will be "visited" state for modal close button */
 /* Between those comments will be "visited" state for modal close button */
 /* Hover, focus */
-.modal-button:hover,
-.modal-button:focus {
-    transform: scale(1.3);
-    background-color: var(--accent, #2196F3);
-}
 
 .modal-button:hover .close-modal,
 .modal-button:focus .close-modal {
-    transform: scale(1.2);
-    fill: #fff;
+    fill: var(--accent, #2196F3);
 }
 
 /* Between those comments will be "active" state for modal close button */
