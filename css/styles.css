@@ -627,6 +627,7 @@
 .footer-container {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
 }
 
 /* Logo footer*/
@@ -661,7 +662,6 @@
 }
 
 .footer-social {
-    margin-left: 70px;
     padding: 0;
 }
 
@@ -697,7 +697,6 @@
 
 .form {
     display: flex;
-    margin-left: 93px;
     max-width: 570px;
     width: 100%;
 
