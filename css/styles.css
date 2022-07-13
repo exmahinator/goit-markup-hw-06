@@ -452,6 +452,9 @@
     so instead of 30*2 margin between items there will be 30*3 + 30px padding (right + left) */
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
 }
 
 .we-do-item:nth-child(3n) {
@@ -460,12 +463,6 @@
 
 .we-do-image {
     display: block;
-}
-
-.we-do-position {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
 }
 
 .we-do-description {
